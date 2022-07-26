@@ -67,7 +67,7 @@ def createapi():
     return x,200
 
 
-@app.route("/",methods=['get'])
+@app.route("/",methods=['GET'])
 def cek():
     return "sip"
 
