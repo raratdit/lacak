@@ -3,7 +3,6 @@ import pandas as pd
 from datetime import datetime
 import base64
 from flask import Flask, request
-import json
 app = Flask(__name__)
 
 #Tabel 0 - Detail Nosi
@@ -66,6 +65,11 @@ def createapi():
 
     x = '{' + data + ',"riwayat":' + datahisto +'}'
     return x,200
+
+
+@app.route("/",methods=['get'])
+def cek():
+    return "sip"
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
